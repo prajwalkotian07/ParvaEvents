@@ -1,0 +1,385 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.3);
+    border-bottom:1px solid rgba(212,175,55,0.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.logo span{
+    font-size:24px;
+    font-family:'Cormorant Garamond',serif;
+    color:#fff;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#D4AF37;
+}
+
+.book-btn{
+    text-decoration:none;
+    color:#D4AF37;
+    border:1px solid #D4AF37;
+    padding:12px 25px;
+    border-radius:40px;
+    transition:.4s;
+}
+
+.book-btn:hover{
+    background:#D4AF37;
+    color:#000;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url("images/hero1.jpg");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.small-heading{
+    color:#D4AF37;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.hero-content h1{
+    font-size:95px;
+    font-family:'Cormorant Garamond',serif;
+    line-height:1;
+}
+
+.hero-content h1 span{
+    color:#D4AF37;
+    font-style:italic;
+}
+
+.services-line{
+    margin-top:25px;
+    font-size:18px;
+    color:#ddd;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:35px;
+    text-decoration:none;
+    background:#D4AF37;
+    color:#000;
+    padding:18px 50px;
+    border-radius:50px;
+    font-weight:600;
+    box-shadow:0 0 35px rgba(212,175,55,.5);
+}
+
+/* SECTION */
+
+section{
+    padding:120px 8%;
+}
+
+.section-small{
+    color:#D4AF37;
+    text-align:center;
+    margin-bottom:15px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+section h2{
+    text-align:center;
+    font-size:70px;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:70px;
+}
+
+section h2 span{
+    color:#D4AF37;
+    font-style:italic;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    border:1px solid rgba(212,175,55,.2);
+    background:#0a0a0a;
+    padding:45px;
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    border-color:#D4AF37;
+}
+
+.service-card i{
+    color:#D4AF37;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:32px;
+    margin-bottom:15px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.service-card p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+.gallery-grid img:nth-child(1){
+    grid-row:span 2;
+    height:780px;
+}
+
+/* CONTACT */
+
+.contact-section{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+}
+
+.contact-left h2{
+    text-align:left;
+    margin-bottom:40px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.contact-item i{
+    color:#D4AF37;
+    width:60px;
+    height:60px;
+    border:1px solid rgba(212,175,55,.3);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-item small{
+    color:#777;
+}
+
+.contact-item p{
+    margin-top:5px;
+    font-size:22px;
+}
+
+.booking-card{
+    border:1px solid rgba(212,175,55,.25);
+    background:#0b0b0b;
+    padding:50px;
+    text-align:center;
+}
+
+.booking-card h3{
+    font-size:48px;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:15px;
+}
+
+.booking-card p{
+    color:#aaa;
+    margin-bottom:35px;
+}
+
+.call-btn,
+.whatsapp-btn{
+    display:block;
+    text-decoration:none;
+    padding:18px;
+    border-radius:50px;
+    margin-top:15px;
+}
+
+.call-btn{
+    background:#D4AF37;
+    color:#000;
+    font-weight:600;
+}
+
+.whatsapp-btn{
+    border:1px solid #D4AF37;
+    color:#D4AF37;
+}
+
+/* FLOATING */
+
+.floating-buttons{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:999;
+}
+
+.floating-buttons a{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:white;
+}
+
+.floating-buttons a:nth-child(1){
+    background:#E1306C;
+}
+
+.floating-buttons a:nth-child(2){
+    background:#25D366;
+}
+
+.floating-buttons a:nth-child(3){
+    background:#D4AF37;
+    color:black;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#aaa;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:60px;
+    }
+
+    section h2{
+        font-size:45px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img:nth-child(1){
+        height:380px;
+    }
+
+    .contact-section{
+        grid-template-columns:1fr;
+    }
+
+    header{
+        padding:20px;
+    }
+}
